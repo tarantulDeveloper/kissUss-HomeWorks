@@ -2,7 +2,7 @@ package InheritanceTasks.variant_A.task_4;
 
 import java.util.ArrayList;
 
-public class Country {
+public class Country implements CountryInterface{
     private String country;
     private String capital;
     private double square;
@@ -23,6 +23,7 @@ public class Country {
         this.country = country;
     }
 
+    @Override
     public String getCapital() {
         return capital;
     }
