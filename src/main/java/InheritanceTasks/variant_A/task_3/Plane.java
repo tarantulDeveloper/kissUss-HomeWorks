@@ -2,7 +2,7 @@ package InheritanceTasks.variant_A.task_3;
 
 import java.util.Arrays;
 
-public class Plane {
+public class Plane implements PlaneInterface{
     private String brand;
     private PlaneEngine planeEngine;
     private PlaneWheel planeWheel;
@@ -17,16 +17,16 @@ public class Plane {
         this.route = route;
     }
 
-
-    void Fly() {
+    @Override
+    public void Fly() {
         System.out.println(this.brand + " is flying...");
     }
-
-    void setRoute(String[] route) {
+    @Override
+    public void setRoute(String[] route) {
         this.route = route;
     }
-
-    void showRoute() {
+    @Override
+    public void showRoute() {
         System.out.println(this.brand + " is flying from " + this.route[0] + " to " + this.route[1]);
     }
 
