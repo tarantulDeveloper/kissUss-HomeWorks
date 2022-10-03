@@ -1,6 +1,6 @@
 package InheritanceTasks.variant_A.task_2;
 
-public class Car {
+public class Car implements CarInterface{
 
     private String brand;
     private double fuel;
@@ -13,23 +13,22 @@ public class Car {
         this.wheel = wheel;
         this.engine = engine;
     }
-    void Go() {
+    @Override
+    public void Go() {
         System.out.println("Car is going to somewhere...");
     }
 
-
-
-    void refuel(double fuel) {
+    @Override
+    public void refuel(double fuel) {
         this.fuel += fuel;
     }
 
-    void changeWheel(Wheel wheel) {
+    @Override
+    public void changeWheel(Wheel wheel) {
         this.wheel = wheel;
     }
 
-    void carBrand() {
-        System.out.println(this.brand);
-    }
+
 
     @Override
     public String toString() {
