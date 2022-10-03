@@ -3,7 +3,7 @@ package InheritanceTasks.variant_B.task_4;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Salad {
+public class Salad implements SaladInterface {
     private final ArrayList<Vegetable> vegetables = new ArrayList<>();
 
     public Salad(Vegetable... vegetables) {
@@ -16,7 +16,7 @@ public class Salad {
                 "vegetables=" + vegetables +
                 '}';
     }
-
+    @Override
     public double overallColorie() {
         double colorie = 0;
         for (Vegetable vegetable : vegetables) {
@@ -25,7 +25,7 @@ public class Salad {
         }
         return colorie;
     }
-
+    @Override
     public ArrayList<Vegetable> filterVegetablesByCalorie(double min, double max) {
         ArrayList<Vegetable> filteredVegetables = new ArrayList<>();
         for (Vegetable vegetable : vegetables) {
