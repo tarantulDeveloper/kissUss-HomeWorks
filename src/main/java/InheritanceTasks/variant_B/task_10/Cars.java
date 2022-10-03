@@ -1,9 +1,11 @@
 package InheritanceTasks.variant_B.task_10;
 
+import InheritanceTasks.variant_A.task_2.Car;
+
 import java.util.Comparator;
 import java.util.List;
 
-public class Cars {
+public class Cars implements CarsInterface {
     private String name;
     private double power;
     private double fuelConsumption;
@@ -22,23 +24,25 @@ public class Cars {
         this.width = width;
         this.price = price;
     }
-
+    @Override
     public void show() {
         System.out.println("Наименование: " + this.name);
         System.out.println("Мощность: " + this.power);
         System.out.println("Потребление топлива: " + this.fuelConsumption);
     }
 
+
+    @Override
     public void sortByFuelConsumption(List<Cars> cars) {
         cars.sort(Comparator.comparing(x -> x.fuelConsumption));
 
     }
 
-
+    @Override
     public String getName() {
         return name;
     }
-
+    @Override
     public void setName(String name) {
         this.name = name;
     }

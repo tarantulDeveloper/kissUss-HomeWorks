@@ -1,7 +1,6 @@
 package InheritanceTasks.variant_A.task_4;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Region {
     private String region;

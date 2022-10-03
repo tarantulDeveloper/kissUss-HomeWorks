@@ -42,9 +42,11 @@ public class Vegetable implements Comparable<Vegetable>{
                 ", price=" + price + " }" ;
     }
 
-
     @Override
     public int compareTo(Vegetable o) {
-        return Double.compare(price,o.getPrice());
+        return Double.compare(o.getPrice(), price);
     }
+
+
+
 }
