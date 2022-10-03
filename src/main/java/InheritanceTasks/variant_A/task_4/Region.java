@@ -2,7 +2,7 @@ package InheritanceTasks.variant_A.task_4;
 
 import java.util.ArrayList;
 
-public class Region {
+public class Region implements RegionInterface{
     private String region;
     private ArrayList<District> districtList;
 
@@ -19,6 +19,7 @@ public class Region {
         this.region = region;
     }
 
+    @Override
     public ArrayList<District> getDistrictList() {
         return districtList;
     }
